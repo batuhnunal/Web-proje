@@ -111,23 +111,45 @@
 
 <div class="login-container">
   
-  <form action="login.php" method="post">
+  <form action="login.php" method="post" onsubmit="return validateForm()">
       <label for="username">Kullanıcı Adı:</label>
       <input type="text" id="username" name="username" required>
       <label for="password">Parola:</label>
       <input type="password" id="password" name="password" required>
       <input type="submit" value="Giriş Yap">
   </form>
+  <div class="error" id="error"></div>
 </div>
 
 
+<script>
+  function validateForm() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorElement = document.getElementById('error');
+      errorElement.textContent = '';
+
+      if (!username || !password) {
+          errorElement.textContent = 'Kullanıcı adı ve şifre boş geçilemez.';
+          return false;
+      }
+
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@sakarya\.edu\.tr$/;
+      if (!emailPattern.test(username)) {
+          errorElement.textContent = 'Geçerli bir sakarya.edu.tr email adresi giriniz.';
+          return false;
+      }
+
+      return true;
+  }
+</script>
 
 
 
 
 
-
-
+<br>
+<br>
 
   <style>
     footer {
