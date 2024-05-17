@@ -33,12 +33,10 @@ function validateEmail(email) {
 
 function sil()
 {
-   
-    document.getElementById('name').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('message').value = "";
-
-
+    var name = document.getElementById('name').value ;
+    name = "";
+    var password = document.getElementById('password').value = " ";
+    var email = document.getElementById('email').value = " ";
  
 }
 

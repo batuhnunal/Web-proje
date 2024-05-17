@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function redirectAfterDelay(url, delay) {
+            setTimeout(function() {
+                window.location.href = url;
+            }, delay);
+        }
+    </script>
+    
 </head>
 <body>
     
@@ -20,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Hoşgeldiniz " . $username;
     } else {
         // Başarısız giriş denemesinde login sayfasına geri yönlendirme
-        header("Location: giriş.html");
+        echo "Hatalı Giriş. Tekrar deneyiniz. 4 sn sonra yönlendirme -> giriş.html ";
+        echo '<script>redirectAfterDelay("giriş.html", 4000);</script>';
         exit();
     }
 } else {
