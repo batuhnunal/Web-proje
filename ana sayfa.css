@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(58, 85, 63);
+  }
+
+  h1,p,h6 {
+    text-align: center;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #227ff8;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1, h6 {
+    color: whitesmoke;
+}

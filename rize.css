@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(193, 198, 207);
+}
+
+h1 {
+    text-align: center; 
+}
+
+h2, p {
+    margin-left: 15px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #227ff8;
+    padding: 10px 0;
+    text-align: center;
+}

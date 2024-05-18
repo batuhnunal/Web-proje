@@ -1,0 +1,23 @@
+body
+  {
+    background-color:skyblue;
+
+  }
+h1 {
+    text-align: center; 
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #227ff8;
+    padding: 10px 0;
+    text-align: center;
+}
+img {
+    text-align: center; padding-left: 28%;
+}
+h3,p {
+    margin-left: 15px;
+
+}
