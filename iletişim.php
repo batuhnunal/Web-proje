@@ -12,6 +12,11 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
+        $subscribe = isset($_POST['subscribe']) ? htmlspecialchars($_POST['subscribe']) : '';
+
+       
+
+
 
         echo "Adı Soyadı:  ". $name;
         echo  "  <br>  ";
@@ -19,6 +24,13 @@
         echo "  <br>  ";
         echo "Mesaj:  " . $message;
         echo "  <br>  ";
+
+        if ($subscribe == 'yes') {
+            echo "Üniversite Öğrencisi: Evet";
+        } else if ($subscribe == 'no') {
+            echo "Üniversite Öğrencisi: Hayır";
+        } 
+        
 
     }
         
